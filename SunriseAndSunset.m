@@ -40,7 +40,7 @@
     NSTimeInterval setOffset = ((sethrs * 60) + setmins) * 60;
     
     [formatter setDateFormat:@"yyyy-MM-dd'T'HH:mm:ssZ"];
-    NSString *dateStr = [NSString stringWithFormat:@"%i-%02d-%02dT00:00:00+0000", theYear, theMonth, theDay];
+    NSString *dateStr = [NSString stringWithFormat:@"%li-%02ld-%02ldT00:00:00+0000", (long)theYear, (long)theMonth, (long)theDay];
     NSDate *utcMidnight = [formatter dateFromString:dateStr];
     
     NSDate *utcSunrise = [utcMidnight dateByAddingTimeInterval:riseOffset];
