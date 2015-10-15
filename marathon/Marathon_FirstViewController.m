@@ -25,12 +25,22 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
+    // ** Don't forget to add NSLocationWhenInUseUsageDescription in MyApp-Info.plist and give it a string
+    
+    self.locationManager = [[CLLocationManager alloc] init];
+    self.locationManager.delegate = self;
+    // Check for iOS 8. Without this guard the code will crash with "unknown selector" on iOS 7.
+    if ([self.locationManager respondsToSelector:@selector(requestWhenInUseAuthorization)]) {
+        [self.locationManager requestWhenInUseAuthorization];
+    }
+    [self.locationManager startUpdatingLocation];
 	// Do any additional setup after loading the view, typically from a nib.
-    [self setLocationManager:[[CLLocationManager alloc] init]];
-    [locationManager setDelegate:self];
-    [locationManager setDistanceFilter:kCLDistanceFilterNone];
-    [locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
-    [locationManager startUpdatingLocation];
+//    [self setLocationManager:[[CLLocationManager alloc] init]];
+//    [locationManager setDelegate:self];
+//    [locationManager setDistanceFilter:kCLDistanceFilterNone];
+//    [locationManager setDesiredAccuracy:kCLLocationAccuracyHundredMeters];
+//    [locationManager startUpdatingLocation];
     
 }
 

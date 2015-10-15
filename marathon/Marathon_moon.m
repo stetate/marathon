@@ -55,7 +55,7 @@ float kepler( float m, float ecc ){
 	e -= delta / ( 1.0f - ecc * cos(e) );
 	
 	// loop
-	while( abs(delta) > EPSILON ){
+	while( fabsf(delta) > EPSILON ){
 		delta = e - ecc * sin(e) - m;
 		e -= delta / ( 1.0f - ecc * cos(e) );
 	}

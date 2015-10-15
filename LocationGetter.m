@@ -18,6 +18,7 @@ BOOL didUpdate = NO;
 - (void)startUpdates
 {
     NSLog(@"Starting Location Updates");
+
     
     if (locationManager == nil)
         locationManager = [[CLLocationManager alloc] init];
