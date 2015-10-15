@@ -27,6 +27,11 @@
 		36DF4B6717248A7E00449979 /* CoreLocation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 36DF4B6617248A7E00449979 /* CoreLocation.framework */; };
 		36DF4B6A17248B6A00449979 /* LocationGetter.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DF4B6917248B6A00449979 /* LocationGetter.m */; };
 		36DF4B6D17248EF000449979 /* CoreLocationExampleAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 36DF4B6C17248EF000449979 /* CoreLocationExampleAppDelegate.m */; };
+		3B1CEA26174D9AB100D45C13 /* SunriseAndSunset.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CEA23174D9AB100D45C13 /* SunriseAndSunset.m */; };
+		3B1CEA27174D9AB100D45C13 /* sunriset.c in Sources */ = {isa = PBXBuildFile; fileRef = 3B1CEA24174D9AB100D45C13 /* sunriset.c */; };
+		3B3F499117F3C3D4006B18E3 /* Marathon_moon.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B3F499017F3C3D4006B18E3 /* Marathon_moon.m */; };
+		3BD129D91728B54100F8206D /* Marathon_mapViewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3BD129D81728B54100F8206D /* Marathon_mapViewViewController.m */; };
+		3BD129DB1728B7E500F8206D /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3BD129DA1728B7E500F8206D /* MapKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +63,17 @@
 		36DF4B6917248B6A00449979 /* LocationGetter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LocationGetter.m; sourceTree = "<group>"; };
 		36DF4B6B17248EF000449979 /* CoreLocationExampleAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreLocationExampleAppDelegate.h; sourceTree = "<group>"; };
 		36DF4B6C17248EF000449979 /* CoreLocationExampleAppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CoreLocationExampleAppDelegate.m; sourceTree = "<group>"; };
+		3B1CEA22174D9AB100D45C13 /* SunriseAndSunset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SunriseAndSunset.h; sourceTree = "<group>"; };
+		3B1CEA23174D9AB100D45C13 /* SunriseAndSunset.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SunriseAndSunset.m; sourceTree = "<group>"; };
+		3B1CEA24174D9AB100D45C13 /* sunriset.c */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.c; path = sunriset.c; sourceTree = "<group>"; };
+		3B1CEA25174D9AB100D45C13 /* sunriset.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = sunriset.h; sourceTree = "<group>"; };
+		3B1CEA29174D9F0600D45C13 /* CommonUtil.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CommonUtil.h; sourceTree = "<group>"; };
+		3B1CEA2A174D9F0600D45C13 /* CommonUtil.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CommonUtil.m; sourceTree = "<group>"; };
+		3B3F498F17F3C3D4006B18E3 /* Marathon_moon.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marathon_moon.h; sourceTree = "<group>"; };
+		3B3F499017F3C3D4006B18E3 /* Marathon_moon.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marathon_moon.m; sourceTree = "<group>"; };
+		3BD129D71728B54100F8206D /* Marathon_mapViewViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Marathon_mapViewViewController.h; sourceTree = "<group>"; };
+		3BD129D81728B54100F8206D /* Marathon_mapViewViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Marathon_mapViewViewController.m; sourceTree = "<group>"; };
+		3BD129DA1728B7E500F8206D /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -65,6 +81,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3BD129DB1728B7E500F8206D /* MapKit.framework in Frameworks */,
 				36DF4B6717248A7E00449979 /* CoreLocation.framework in Frameworks */,
 				36DF4B351724851200449979 /* UIKit.framework in Frameworks */,
 				36DF4B371724851200449979 /* Foundation.framework in Frameworks */,
@@ -78,6 +95,8 @@
 		36DF4B281724851100449979 = {
 			isa = PBXGroup;
 			children = (
+				3B1CEA2B174D9F0A00D45C13 /* Utilities */,
+				3B1CEA28174D9ACA00D45C13 /* sunPos */,
 				36DF4B6517248A3600449979 /* LocationServices */,
 				36DF4B3A1724851300449979 /* marathon */,
 				36DF4B331724851200449979 /* Frameworks */,
@@ -96,6 +115,7 @@
 		36DF4B331724851200449979 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				3BD129DA1728B7E500F8206D /* MapKit.framework */,
 				36DF4B6617248A7E00449979 /* CoreLocation.framework */,
 				36DF4B341724851200449979 /* UIKit.framework */,
 				36DF4B361724851200449979 /* Foundation.framework */,
@@ -107,6 +127,9 @@
 		36DF4B3A1724851300449979 /* marathon */ = {
 			isa = PBXGroup;
 			children = (
+				3B36AD441891EB5800A0EC97 /* iPad */,
+				3BD129D71728B54100F8206D /* Marathon_mapViewViewController.h */,
+				3BD129D81728B54100F8206D /* Marathon_mapViewViewController.m */,
 				36DF4B431724852600449979 /* Marathon_AppDelegate.h */,
 				36DF4B441724852B00449979 /* Marathon_AppDelegate.m */,
 				36DF4B4C1724852E00449979 /* MainStoryboard_iPhone.storyboard */,
@@ -120,6 +143,8 @@
 				36DF4B5C1724855100449979 /* second.png */,
 				36DF4B5E1724855300449979 /* second@2x.png */,
 				36DF4B3B1724851E00449979 /* Supporting Files */,
+				3B3F498F17F3C3D4006B18E3 /* Marathon_moon.h */,
+				3B3F499017F3C3D4006B18E3 /* Marathon_moon.m */,
 			);
 			path = marathon;
 			sourceTree = "<group>";
@@ -149,6 +174,33 @@
 			name = LocationServices;
 			sourceTree = "<group>";
 		};
+		3B1CEA28174D9ACA00D45C13 /* sunPos */ = {
+			isa = PBXGroup;
+			children = (
+				3B1CEA22174D9AB100D45C13 /* SunriseAndSunset.h */,
+				3B1CEA23174D9AB100D45C13 /* SunriseAndSunset.m */,
+				3B1CEA24174D9AB100D45C13 /* sunriset.c */,
+				3B1CEA25174D9AB100D45C13 /* sunriset.h */,
+			);
+			name = sunPos;
+			sourceTree = "<group>";
+		};
+		3B1CEA2B174D9F0A00D45C13 /* Utilities */ = {
+			isa = PBXGroup;
+			children = (
+				3B1CEA29174D9F0600D45C13 /* CommonUtil.h */,
+				3B1CEA2A174D9F0600D45C13 /* CommonUtil.m */,
+			);
+			name = Utilities;
+			sourceTree = "<group>";
+		};
+		3B36AD441891EB5800A0EC97 /* iPad */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = iPad;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -176,8 +228,13 @@
 			isa = PBXProject;
 			attributes = {
 				CLASSPREFIX = Marathon_;
-				LastUpgradeCheck = 0460;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = "Stephen Tate";
+				TargetAttributes = {
+					36DF4B301724851200449979 = {
+						DevelopmentTeam = ZHBVE76MW9;
+					};
+				};
 			};
 			buildConfigurationList = 36DF4B2C1724851100449979 /* Build configuration list for PBXProject "marathon" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -221,12 +278,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B3F499117F3C3D4006B18E3 /* Marathon_moon.m in Sources */,
 				36DF4B411724852300449979 /* main.m in Sources */,
 				36DF4B451724852B00449979 /* Marathon_AppDelegate.m in Sources */,
 				36DF4B541724854100449979 /* Marathon_FirstViewController.m in Sources */,
 				36DF4B5B1724854C00449979 /* Marathon_SecondViewController.m in Sources */,
 				36DF4B6A17248B6A00449979 /* LocationGetter.m in Sources */,
 				36DF4B6D17248EF000449979 /* CoreLocationExampleAppDelegate.m in Sources */,
+				3BD129D91728B54100F8206D /* Marathon_mapViewViewController.m in Sources */,
+				3B1CEA26174D9AB100D45C13 /* SunriseAndSunset.m in Sources */,
+				3B1CEA27174D9AB100D45C13 /* sunriset.c in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -272,8 +333,10 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_OPTIMIZATION_LEVEL = 0;
@@ -285,8 +348,9 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE = "38DE6722-79D5-4DBE-A687-5A28E82274A1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -304,14 +368,16 @@
 				CLANG_WARN_ENUM_CONVERSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				COPY_PHASE_STRIP = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 6.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
+				PROVISIONING_PROFILE = "38DE6722-79D5-4DBE-A687-5A28E82274A1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -321,10 +387,14 @@
 		36DF4B631724855300449979 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "marathon/marathon-Prefix.pch";
 				INFOPLIST_FILE = "marathon/marathon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stevetate.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -332,10 +402,14 @@
 		36DF4B641724855300449979 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "marathon/marathon-Prefix.pch";
 				INFOPLIST_FILE = "marathon/marathon-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "stevetate.${PRODUCT_NAME:rfc1034identifier}";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -350,7 +424,7 @@
 				36DF4B611724855300449979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
+			defaultConfigurationName = Debug;
 		};
 		36DF4B621724855300449979 /* Build configuration list for PBXNativeTarget "marathon" */ = {
 			isa = XCConfigurationList;
@@ -359,6 +433,7 @@
 				36DF4B641724855300449979 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
 		};
 /* End XCConfigurationList section */
 	};

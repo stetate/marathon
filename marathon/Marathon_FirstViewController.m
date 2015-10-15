@@ -8,6 +8,7 @@
 
 #import "Marathon_FirstViewController.h"
 #import "CoreLocationExampleAppDelegate.h"
+#import "Marathon_mapViewViewController.h"
 
 @interface Marathon_FirstViewController ()
 
@@ -18,6 +19,7 @@
 @synthesize locationManager;
 @synthesize lastKnownLocation;
 @synthesize longitude, latitude;
+@synthesize instantMap;
 
 
 - (void)viewDidLoad
@@ -32,6 +34,26 @@
     
 }
 
+-(void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
+{
+    NSLog(@"preparing to switch to mapview %@", segue.identifier);
+    if([segue.identifier isEqualToString:@"mapViewShow"])
+    {
+        [segue.destinationViewController setLocation:self.lastKnownLocation];
+        
+        NSLog(@"%@",segue.destinationViewController);
+
+        //[controller setLocation:self.lastKnownLocation];
+        
+        NSLog(@"this is what i am sent over lat = %f long= %f", lastKnownLocation.coordinate.longitude, lastKnownLocation.coordinate.latitude);
+        
+        
+        
+    }
+    
+}
+
+
 - (void)didReceiveMemoryWarning
 {
     [super didReceiveMemoryWarning];
@@ -43,11 +65,22 @@
 - (void)locationManager:(CLLocationManager *)manager
     didUpdateToLocation:(CLLocation *)newLocation fromLocation:(CLLocation *)oldLocation {
     
+    lastKnownLocation = newLocation;
+    
+    /// location logging
+    ///NSLog(@"%@", newLocation);
     
     [latitude setText:[NSString stringWithFormat:@"%f", newLocation.coordinate.latitude]];
     
     [longitude setText:[NSString stringWithFormat:@"%f", newLocation.coordinate.longitude]];
-}- (void)newPhysicalLocation:(CLLocation *)location {
+    
+    [self.instantMap setRegion:MKCoordinateRegionMakeWithDistance(self.lastKnownLocation.coordinate, 1000, 1000)];
+    [self.instantMap setCenterCoordinate:[self.lastKnownLocation coordinate] animated:TRUE];
+    
+}
+
+
+- (void)newPhysicalLocation:(CLLocation *)location {
     
     // Store for later use
     self.lastKnownLocation = location;
